@@ -1,0 +1,46 @@
+Upute korištenja:
+
+    Preduvjet: Korisnik mora imati instalirani program Python na svojem računalu
+    
+    U programu Command Prompt(Windows)/Terminal(Linux/macOS) potrebno je pozicionirati
+    se u direktorij sa našim programom kodera. Zatim se program može pokrenuti na 3 načina:
+    bez argumenata, sa 2 argumenata ili sa 3 argumenata.
+    
+    Program se pokreće bez argumenata ako se u CMD/Terminal upiše naredbom: python tinf.py,
+    sa 2 argumenata naredbom: python tinf.py <shema kodera> <n>
+    ili sa 3 argumenata naredbom: python tinf.py <shema kodera> <n> <niz bitova koji se kodira>.
+    
+    Ako se program pokrene sa 3 argumenata, ispis polinoma g(x), n, k, generirajuće matrice u 
+    standardnom obliku te kodne riječi se odvija bez dodatne interakcije sa korisnikom.
+    Pokretanjem sa 0 argumenata se od korisnika očekuje unos sheme kodera i n, te se tada
+    ispisuje polinom g(x), n, k te generirajuća matrica.
+    To isto se događa i pokretanjem sa 2 argumenta ali bez dodatnog unosa od korisnika.
+    Nakon ispisa, u slučajima 0 i 2 argumenta, program pita korisnika želi li kodirati 
+    slijed bitova. Ukoliko korisnik ne želi(unosi slovo n), program se zaustavlja.
+    Ukoliko korisnik želi kodirati slijed bitova, unosom slova y, program traži od korisnika
+    slijed koji će kodirati. Ispravnim unosom slijeda, program će ispisati generiranu kodnu
+    riječ, te pita korisnika želi li opet kodirati slijed bitova.
+    
+    Ukoliko je korisnik u bilo kojem trenutku unio krive podatke, npr. krivi broj argumenata,
+    krivi oblik argumenata itd., program baca iznimku sa kratkim opisom greške, te se 
+    izvođenje programa zaustavlja.
+    
+Primjer izvođenja programa:
+    
+    Korisnik pokreće program na slijedeći način: python tinf.py ZRRZRZR 7 110
+    
+    Program korisniku ispisuje slijedeće podatke:
+    
+    Shema kodera: ZRRZRZR
+
+    n: 7
+    k: 3
+
+    Polinom: [1, 1, 1, 0, 1]
+
+    Generirajuca matrica u standardnom obliku:
+    [1, 0, 0, 1, 1, 1, 0]
+    [0, 1, 0, 0, 1, 1, 1]
+    [0, 0, 1, 1, 1, 0, 1]
+
+    Kodna rijec c je: [1, 1, 0, 1, 0, 0, 1]
